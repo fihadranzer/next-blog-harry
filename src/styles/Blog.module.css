@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.blogslot {
+  width: 50%;
+  padding: 10px 20px;
+  background-color: whitesmoke;
+  margin: 10px 0;
+}
+
+.author {
+  font-style: italic;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 2px 0;
+}
+
+.blogslot p {
+  padding: 5px 0;
+}
+
+.blogslot button {
+  background-color: rgb(74, 167, 255);
+  border: none;
+  border-radius: 5px;
+  padding: 2px;
+  color: white;
+  display: block;
+  margin: 5px 0;
+}
