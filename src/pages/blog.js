@@ -2,20 +2,14 @@ import React, { useEffect, useState } from "react";
 import styles from "@/styles/Blog.module.css";
 
 import Link from "next/link";
-const Blog = () => {
-  const [blogs, setBlogs] = useState([]);
+const Blog = (props) => {
+  console.log(props);
 
-  useEffect(() => {
-    console.log("use effect is running ");
-    fetch("http://localhost:3000/api/blogs")
-      .then((a) => {
-        return a.json();
-      })
-      .then((parsed) => {
-        console.log(parsed);
-        setBlogs(parsed);
-      });
-  }, []);
+  const [blogs, setBlogs] = useState(props.allBlogs);
+
+  // useEffect(() => {
+
+  // }, []);
 
   return (
     <div className={styles.container}>
@@ -24,7 +18,9 @@ const Blog = () => {
           <div key={index} className={styles.blogslot}>
             <Link href={`/blogpost/${blogItem.slug}`}>
               <h3>{blogItem.title}</h3>
-              <p>{blogItem.content.substr(0, 120)} <button>read more</button></p>
+              <p>
+                {blogItem.content.substr(0, 120)} <button>read more</button>
+              </p>
               <p className={styles.author}>{blogItem.author}</p>
             </Link>
           </div>
@@ -34,4 +30,17 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+
+
+export const getServerSideProps = async (context) => {
+  let data = await fetch("http://localhost:3000/api/blogs");
+
+  let allBlogs = await data.json();
+
+  return {
+    props: { allBlogs },
+  };
+};
+
+
+export default Blog; 
