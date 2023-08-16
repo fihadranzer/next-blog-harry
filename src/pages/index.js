@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import Link from "next/link";
+// import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -15,17 +14,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     
-
-      
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.center}>
           <h1 className="boldercolor">CODE HUNTER</h1>
         </div>
-          <Image className={styles.myImg} src="/homez.jpg" width={237} height={150}/>
+        {/* <Image className={styles.myImg} src="/homez.jpg" width={237} height={150}/> */}
 
+        <img src="/homez.jpg" alt="photo" className={styles.myImg} />
 
-        <p className={styles.homedescrip}>A Blog for hunting coder for hunting code </p>
+        <p className={styles.homedescrip}>
+          A Blog for hunting coder for hunting code{" "}
+        </p>
 
         <div className={styles.popular__blog}>
           <h2>Popular blogs</h2>

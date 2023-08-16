@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "@/styles/About.module.css";
-import Image from "next/image";
 
 const About = () => {
   return (
     <div className={styles.about_us}>
       <div className={styles.left__aboutus}>
-       
-
-        <img src="/aboutus.jpg" alt=""  className={styles.abt__img}/>
+        <img src="/aboutus.jpg" alt="" className={styles.abt__img} />
       </div>
       <div className={styles.right__aboutus}>
         <h1 className="about__heading">About us</h1>
@@ -24,9 +21,7 @@ const About = () => {
           nostrum explicabo!
         </p>
 
-        <div>
-
-        </div>
+        <div></div>
       </div>
     </div>
   );

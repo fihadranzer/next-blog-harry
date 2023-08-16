@@ -45,6 +45,11 @@
   max-width: 100%;
 }
 
+.myImg{
+  width: 237px;
+  height: 150px;
+}
+
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
