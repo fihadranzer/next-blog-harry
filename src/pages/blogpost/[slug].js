@@ -17,6 +17,7 @@ const Slug = (props) => {
             <h1>{blog.title}</h1>
             <hr />
             <div>{blog.content}</div>
+            
           </>
         ) : (
           <p>Loading...</p>
